@@ -1,2 +1,5 @@
-# Fonksiyonel_Programlama_Proje
-Fonksiyonel_Programlama_Proje
+# WhisperNote 
+
+WhisperNote – İç sesini dinle ve kaydet
+
+
