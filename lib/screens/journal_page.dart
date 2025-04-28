@@ -693,3 +693,4 @@ class _JournalPageState extends State<JournalPage> {
     );
   }
 }
+//nbc
