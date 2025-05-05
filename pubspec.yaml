@@ -1,27 +1,52 @@
 name: digital_gunluk
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: 'none' # pub.dev'de yayınlamayı engeller
 
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.7.0
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations: # Yerelleştirme için
+    sdk: flutter
 
-  cupertino_icons: ^1.0.8
+  # UI & Temel Yardımcılar
+  cupertino_icons: ^1.0.8 # Güncel: ^1.0.9 veya üstü
+  intl: ^0.19.0          # Güncel: ^0.20.0 veya üstü
 
-  # Firebase eklentileri
-  firebase_core: ^2.24.2
-  firebase_auth: ^4.16.0
+  # Dosya Sistemi, İzinler ve Dosya Açma
+  path_provider: ^2.1.3    # Güncel: ^2.1.4 veya üstü
+  open_file: ^3.3.2        # Güncel: ^3.3.3 veya üstü
+  permission_handler: ^11.3.1 # Güncel: ^12.0.0+1 veya üstü
+  sqflite: ^2.3.3+1 # SQLite veritabanı
+  path: ^1.9.0 # <-- Düzeltilmiş Satır (veya daha güncel bir versiyon)
+
+  # Zaman ve Bildirimler
+  # --- DEĞİŞİKLİK BAŞLANGICI ---
+  # flutter_local_notifications ^19.x.x gereksinimi için güncellendi
+  timezone: ^0.10.0
+  # API İletişimi için paketler
+  dio: ^5.4.1 # API İletişimi için HTTP istemcisi (Güncel 5.x.x versiyonunu kullanın)  json_annotation: ^4.8.1 # JSON serileştirme/deserileştirme
+  # --- DEĞİŞİKLİK SONU ---
+  flutter_local_notifications: ^19.1.0 # Bu sürüm artık timezone ^0.10.0 gerektiriyor
+
+  # Özellikler
+  table_calendar: ^3.1.3 # Güncel: ^3.2.0 veya üstü
+  record: ^5.2.1         # Güncel: ^6.0.0 veya üstü
+  audioplayers: ^6.0.0   # Bu sürüm zaten güncel
+
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  flutter_lints: ^5.0.0
+  flutter_lints: ^3.0.0 # Güncel: ^4.0.0 veya ^5.0.0
+   # JSON serileştirme/deserileştirme için build_runner ve json_serializable
+  build_runner: ^2.4.6
+  json_serializable: ^6.7.1
 
 flutter:
   uses-material-design: true
